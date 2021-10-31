@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run railappv1.py
+web: sh setup.sh && streamlit run app.py
