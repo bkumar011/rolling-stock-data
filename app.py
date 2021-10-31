@@ -46,7 +46,7 @@ code= st.sidebar.text_input('Enter code for searching a specific Rolling Stock')
 #AgGrid(df)
 if type_choice == 'All' and code == '' and stock == 'Wagons':
     
-    st.dataframe(df[disp_col].transpose(),1500,800)
+    st.dataframe(df[disp_col],1500,800)
     
 elif code == '' and stock == 'Wagons':
     
