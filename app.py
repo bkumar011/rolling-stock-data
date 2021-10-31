@@ -1,35 +1,82 @@
+import pandas as pd
 import streamlit as st
 import datetime
+#from st_aggrid import AgGrid
 
-st.title("Vaccination Data")
-st.write("Enter Vaccine information")
+df=pd.read_csv("railwagonv1.csv")
+
+st.title("Database of Rolling Stock over Indian Railways")
+st.write("_______________________________________________")
+stock = st.sidebar.radio("Select the Rolling Stock",('Coaches','Wagons'))
+
+# Select types of wagon to display - User Input
+types = df['Type of Stock'].drop_duplicates()
+types=types.to_list()
+types.insert(0,'All')
+type_choice = st.sidebar.selectbox('Select type of stock:', types)
+
+# Remove type of stock from the list of columns
+columns=df.columns.to_list()
+org_columns=columns.copy()
+columns.remove("Type of Stock")
+columns.insert(0,'All')
+
+#Select columns to display
+options=st.sidebar.multiselect('Select Parameters for display',columns)
+
+#Add Type of Stock column
+if 'All' in options:
+    disp_col= org_columns
+else:
+    if 'Mech. Code' not in options:
+        disp_col=options
+        disp_col.insert(0,'Mech. Code')
+    else:
+        disp_col=options
+
+#Select columns of data frame to be displayed
+#st.write(disp_col)
+
+#if len(disp_col) == 0:
+#st.write("Choose some parameters to display !!!")
+
+code= st.sidebar.text_input('Enter code for searching a specific Rolling Stock')
 
 
-id=st.text_input("ID", value="Enter ID",max_chars=10)
+#AgGrid(df)
+if type_choice == 'All' and code == '' and stock == 'Wagons':
+    
+    st.dataframe(df[disp_col].transpose(),1500,800)
+    
+elif code == '' and stock == 'Wagons':
+    
+    disp_df=df.loc[df['Type of Stock']==type_choice]   
+    st.dataframe(disp_df[disp_col].transpose(),1500,800)
+ 
+elif stock == 'Wagons':
 
-text=st.text_area("Enter Info", "Enter here")
+    disp_df = df.loc[df['Mech. Code'] == code]
+    st.table(disp_df.transpose())
+    #st.dataframe(disp_df,1500,800)
+    # for col in disp_df.columns:
 
-n = st.number_input("Age", min_value=10, max_value=50, step = 1)
+    #     st.write(col,'---->>>',disp_df.iloc[0][col])
+    #     st.write('******************')
 
-birth_date = st.date_input("Date of Birth", min_value=datetime.date(1950,1,1), max_value=datetime.date(2022,1,1))
+else:
+    st.write("Coaching database is currently under development.. Please check Wagons for the time being !!")
 
-smoke = st.checkbox("Do you smoke?")
+st.sidebar.markdown("Copyright © 2021 Northern Railway")
 
-wing=st.radio("Department", options=['Coaching','Workshop','Freight','Planning'])
+#st.dataframe(df.style.highlight_null(null_color="green"),1500,800)
 
-physical_form = st.selectbox("Select level of your physical condition",
-                             options=["Bad", "Normal", "Good"])
-colors = st.multiselect('What are your favorite colors',
-                        options=['Green', 'Yellow', 'Red', 'Blue', 'Pink'])
+##if code != '':
+##    disp_df = df.loc[df['Mech. Code'] == code]
+##    st.dataframe(disp_df,1500,800)
 
 
-image = st.file_uploader("Upload your photo", type=['jpg', 'png'])
 
-submit = st.button("Submit")
+#st.sidebar.button("CLICK")
+#st.table(df)
 
-if submit:
-    st.write("You submitted the form")
-
-click = st.sidebar.button('Click me!')
-if click:
-    st.sidebar.write("You clicked the button")
+#st.write(df)
