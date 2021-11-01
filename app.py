@@ -3,6 +3,7 @@ import streamlit as st
 import datetime
 #from st_aggrid import AgGrid
 
+@st.cache()
 df=pd.read_csv("railwagonv1.csv")
 
 df.fillna(0)
@@ -18,13 +19,14 @@ types.insert(0,'All')
 type_choice = st.sidebar.selectbox('Select type of stock:', types)
 
 # Remove type of stock from the list of columns
-columns=df.columns.to_list()
+#columns=df.columns.to_list()
+columns=df.columns
 org_columns=columns.copy()
-columns.remove("Type of Stock")
-columns.insert(0,'All')
+#columns.remove("Type of Stock")
+#columns.insert(0,'All')
 
 #Select columns to display
-options=st.sidebar.multiselect('Select Parameters for display',["ALL","DADSAD","THIRD"])
+options=st.sidebar.multiselect('Select Parameters for display',["ALL","DADSAD","THIRD"], )
 st.write(options)
 st.write("SELCET")
 
