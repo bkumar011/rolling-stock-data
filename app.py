@@ -26,6 +26,7 @@ columns.insert(0,'All')
 #Select columns to display
 options=st.sidebar.multiselect('Select Parameters for display',columns)
 st.write(options)
+st.write("SELCET")
 
 #Add Type of Stock column
 if 'All' in options:
