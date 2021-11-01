@@ -51,12 +51,12 @@ if type_choice == 'All' and code == '' and stock == 'Wagons':
 elif code == '' and stock == 'Wagons':
     
     disp_df=df.loc[df['Type of Stock']==type_choice]   
-    st.dataframe(disp_df[disp_col].transpose(),1500,800)
+    st.dataframe(disp_df[disp_col],1500,800)
  
 elif stock == 'Wagons':
 
     disp_df = df.loc[df['Mech. Code'] == code]
-    st.table(disp_df.transpose())
+    st.table(disp_df)
     #st.dataframe(disp_df,1500,800)
     # for col in disp_df.columns:
 
