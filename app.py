@@ -25,11 +25,12 @@ columns.insert(0,'All')
 
 #Select columns to display
 options=st.sidebar.multiselect('Select Parameters for display',columns)
-st.write("What is happening !!!!!!!")
+st.write(options)
 
 #Add Type of Stock column
 if 'All' in options:
     disp_col= org_columns
+    st.write("WENT IN")
 else:
     if 'Mech. Code' not in options:
         disp_col=options
