@@ -6,6 +6,8 @@ import datetime
 #@st.cache
 df=pd.read_csv("railwagonv1.csv")
 
+df.fillna(0)
+
 st.title("Database of Rolling Stock over Indian Railways")
 st.write("_______________________________________________")
 stock = st.sidebar.radio("Select the Rolling Stock",('Coaches','Wagons'))
@@ -24,8 +26,7 @@ columns.remove("Type of Stock")
 columns.insert(0,'All')
 
 #Select columns to display
-#opt=st.sidebar.multiselect('Select Parameters for display',columns )
-opt=['All']
+opt=st.sidebar.multiselect('Select Parameters for display',columns )
 
 #Add Type of Stock column
 if 'All' in opt:
@@ -36,7 +37,6 @@ else:
         disp_col.insert(0,'Mech. Code')
     else:
         disp_col=opt
-
 
 #Select columns of data frame to be displayed
 #st.write(disp_col)
