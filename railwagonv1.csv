@@ -11,17 +11,7 @@ Type of Stock,Mech. Code,Wagon Description,"Length over Headstock
  (mm)","Journal centre
  (mm)","Wheel Dia Max
  (mm)","Wheel Dia Min
- (mm)",Material of Construction,Axle Load (t),Tare Wt.(t),Carrying capacity(t),Gross Wt.(t),Ratio(CC to Tare),Ratio(Gross to Tare),Year of First Manufacture,Commodity Transported,Type of Bogie,Outer spring (nos/Bogie),Inner spring (nos/Bogie),Snubber spring (nos/Bogie),Type of Side Bearer Assembly,Type of Coupler,Type of Bearing,Air Brake Sytem,RDSO Speed Certificate Date,"RDSO Certified Speed Empty
- KMPH","RDSO Certified Speed Loaded
- KMPH",Rly Bd. Sanction Date,"Rly Bd. Sanction Speed Empty
- KMPH","Rly Bd. Sanction Speed Loaded
- KMPH",CRS Sanction Date,"CRS Sanction Speed Empty
- KMPH","CRS Sanction Speed Loaded
- KMPH",GM Sanction Date (Empty),GM Sanction Date (Loaded),"GM Sanction Speed Empty
- KMPH","GM Sanction Speed Loaded
- KMPH",Routes (Empty),Routes (Loaded),"Validity
- (Open/Limited/Expired)","Valid Up to 
- (If limited)",Current status/ Remarks,Engg. Case No.,Pending Decision with,Population over IR as on 01.11.2021
-Open wagon,BOXNHL,BG Bogie open wagon,10034,10963,10034,3022,3250,2028,3301,61.05,6690,2000,2260,1000,906,"IRS:M-44, Cold Rolled Sections",22.9,20.6,71,91.6,3.45,4.45,,Coal,CASNUB 22 HS,14,14,4,PU Pad,Non-Transition CBC,CTRB(6x11) E-Class,Underframe Mounted Single Pipe Graduated Release,23.03.2009,100,75,04.11.2020,100,75,N.A.,N.A.,N.A.,03.05.2021,30.06.2021,100,75,133,52,Open,NA,NA,NA,NA,-
-Open wagon,BOXNHL 25T,BG Bogie open wagon,10034,10963,10034,3022,3250,2028,3301,61.05,6690,2000,2260,1000,906,"IRS:M-44, Cold Rolled Sections",25,21.2,78.8,100,3.72,4.72,,Coal,CASNUB 22 HS,14,14,4,PU Pad,Non-Transition CBC,CTRB(6x11) E-Class,Bogie Mounted Twin Pipe Graduated Release,30.10.2015,100,70,25.01.2021,100,45,N.A.,N.A.,N.A.,04.05.2021,Under Process,100,Under Process,135,Under Process,Open,NA,case under process in loaded conditon,519-W/2111,Optg./Engg.,-
-Open wagon,BOXNHS,BG Bogie open wagon,9784,10713,9784,2950,3200,1950,3233,56.29,6524,2000,2260,1000,906,IS:2062 E250A Cu,20.32,22.47,58.81,81.28,2.62,3.62,,Coal,CASNUB 22 HS,14,12,4,PU Pad,Non-Transition CBC,CTRB(6x11) E-Class,Underframe Mounted Single Pipe Graduated Release,15.07.2002,100,100,17.10.2002,100,100,N.A.,N.A.,N.A.,N.A.,N.A.,N.A.,N.A.,N.A.,NA,Open,NA,NA,NA,NA,-
+ (mm)",Material of Construction
+Open wagon,BOXNHL,BG Bogie open wagon,10034,10963,10034,3022,3250,2028,3301,61.05,6690,2000,2260,1000,906,"IRS:M-44, Cold Rolled Sections"
+Open wagon,BOXNHL 25T,BG Bogie open wagon,10034,10963,10034,3022,3250,2028,3301,61.05,6690,2000,2260,1000,906,"IRS:M-44, Cold Rolled Sections"
+Open wagon,BOXNHS,BG Bogie open wagon,9784,10713,9784,2950,3200,1950,3233,56.29,6524,2000,2260,1000,906,IS:2062 E250A Cu
