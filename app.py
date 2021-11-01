@@ -24,7 +24,7 @@ columns.remove("Type of Stock")
 columns.insert(0,'All')
 
 #Select columns to display
-options=st.sidebar.multiselect('Select Parameters for display',"ALL","DADSAD","THIRD")
+options=st.sidebar.multiselect('Select Parameters for display',["ALL","DADSAD","THIRD"])
 st.write(options)
 st.write("SELCET")
 
