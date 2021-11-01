@@ -5,6 +5,8 @@ import datetime
 
 df=pd.read_csv("railwagonv1.csv")
 
+df.fillna(0)
+
 st.title("Database of Rolling Stock over Indian Railways")
 st.write("_______________________________________________")
 stock = st.sidebar.radio("Select the Rolling Stock",('Coaches','Wagons'))
