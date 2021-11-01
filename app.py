@@ -20,8 +20,8 @@ type_choice = st.sidebar.selectbox('Select type of stock:', types)
 # Remove type of stock from the list of columns
 columns=df.columns.to_list()
 org_columns=columns.copy()
-columns.remove("Type of Stock")
-columns.insert(0,'All')
+#columns.remove("Type of Stock")
+#columns.insert(0,'All')
 
 #Select columns to display
 options=st.sidebar.multiselect('Select Parameters for display',columns)
