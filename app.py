@@ -31,9 +31,9 @@ opt=['All']
 if 'All' in opt:
     disp_col= org_columns
 else:
-    if 'Mech. Code' not in opt:
+    if 'Mech Code' not in opt:
         disp_col=opt
-        disp_col.insert(0,'Mech. Code')
+        disp_col.insert(0,'Mech Code')
     else:
         disp_col=opt
 
@@ -59,7 +59,7 @@ elif code == '' and stock == 'Wagons':
  
 elif stock == 'Wagons':
 
-    disp_df = df.loc[df['Mech. Code'] == code]
+    disp_df = df.loc[df['Mech Code'] == code]
     st.table(disp_df)
     #st.dataframe(disp_df,1500,800)
     # for col in disp_df.columns:
@@ -75,7 +75,7 @@ st.sidebar.markdown("Copyright © 2021 Northern Railway")
 #st.dataframe(df.style.highlight_null(null_color="green"),1500,800)
 
 ##if code != '':
-##    disp_df = df.loc[df['Mech. Code'] == code]
+##    disp_df = df.loc[df['Mech Code'] == code]
 ##    st.dataframe(disp_df,1500,800)
 
 
