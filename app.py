@@ -5,7 +5,7 @@ import datetime
 
 #@st.cache
 df=pd.read_csv("railwagonv1.csv")
-
+df = df.replace("","-", regex=True)
 st.title("Database of Rolling Stock over Indian Railways")
 st.write("_______________________________________________")
 stock = st.sidebar.radio("Select the Rolling Stock",('Coaches','Wagons'))
@@ -58,8 +58,8 @@ elif code == '' and stock == 'Wagons':
     st.dataframe(disp_df[disp_col],1500,800)
  
 elif stock == 'Wagons':
-
-    disp_df = df.loc[df['Mech Code'] == code]
+    code=code.upper()
+    disp_df = df.loc[df['Mech Code'].str.contains(code)]
     st.table(disp_df)
     #st.dataframe(disp_df,1500,800)
     # for col in disp_df.columns:
