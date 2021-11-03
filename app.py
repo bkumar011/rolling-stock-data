@@ -70,7 +70,7 @@ elif stock == 'Wagons':
 else:
     st.write("Coaching database is currently under development.. Please check Wagons for the time being !!")
 
-st.sidebar.markdown("Copyright © 2021 Northern Railway")
+#st.sidebar.markdown("Copyright © 2021 Northern Railway")
 
 #st.dataframe(df.style.highlight_null(null_color="green"),1500,800)
 
